@@ -287,7 +287,7 @@ function createArcRotateCamera(scene: Scene) {
       SceneLoader.ImportMeshAsync(
         "",
         "./assets/models/",
-        "style.glb",
+        "dummy.babylon",
         scene
       );
   
