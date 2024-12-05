@@ -7,8 +7,12 @@
     "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview --host",
-    "lghting01build": "tsc && vite build lighting01",
-    "lighting01preview": "vite preview lighting01 --host"
+    "lighting02preview": "vite preview lighting02 --host",
+    "motion03build": "vite build motion03",
+    "shapesbuild": "vite build shapes",
+    "element5build": "vite build element5",
+    "guibuild": "vite build gui",
+    "villagebuild": "vite build village"
   },
   "devDependencies": {
     "typescript": "~5.6.2",
