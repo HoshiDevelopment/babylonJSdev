@@ -14,9 +14,13 @@
     "element5build": "vite build element5",
     "guibuild": "vite build gui",
     "villagebuild": "vite build village",
+    "c3build": "vite build collision03",
     "villpvw": "vite preview village --host",
     "mtn3pvw": "vite preview motion03 --host",
     "ltn02pvw": "vite preview lighting02 --host",
+    "guipvw": "vite preview gui --host",
+    "e5pvw": "vite preview element5 --host",
+    "c3pvw": "vite preview collision03 --host",
     "shapespvw": "vite preview shapes --host"
   },
   "devDependencies": {
