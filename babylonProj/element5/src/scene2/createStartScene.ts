@@ -86,12 +86,28 @@ function createCone(scene: Scene) {
   cone.position.x = 1;
   cone.position.y = 1;
   cone.position.z = -1;
+  cone.rotation.z = 3.14
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./assets/textures/floorn.jpg", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   cone.material = texture;
   return cone;
+}
+
+function createSphere2(scene: Scene) {
+  let sphere = MeshBuilder.CreateSphere(
+    "sphere",
+    { diameter: 1, segments: 32 },
+    scene
+  );
+  sphere.position.x = 1;
+  sphere.position.y = 1.8;
+  sphere.position.z = -1;
+  var texture = new StandardMaterial("grass1", scene);
+  texture.emissiveTexture = new Texture("./assets/textures/wood.jpg", scene);
+  sphere.material = texture;
+  return sphere;
 }
 
 function createTriangle(scene: Scene) {
@@ -144,12 +160,12 @@ function createTorus(scene: Scene) {
   torus.position.z = 1;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./assets/textures/lavatile.jpg", scene);
   texture.diffuseColor = new Color3(0.6, 0.6, 1);
   torus.material = texture;
 
   var texture = new StandardMaterial("reflective", scene);
-  texture.ambientTexture = new Texture("./assets/textures/reflectivity.jpg", scene);
+  texture.ambientTexture = new Texture("./assets/textures/floorn.jpg", scene);
   texture.diffuseColor = new Color3(1, 1, 1);
   torus.material = texture;
   return torus;
@@ -297,6 +313,7 @@ export default function createStartScene(engine: Engine) {
   let box = createBox(scene);
   let cylinder = createCylinder(scene);
   let cone = createCone(scene);
+  let sphere2 = createSphere2(scene);
   let triangle = createTriangle(scene);
   let capsule = createCapsule(scene);
   let torus = createTorus(scene);
